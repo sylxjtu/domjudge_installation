@@ -59,3 +59,7 @@ sudo docker-compose up -d
 
 ## 修改管理员密码
 
+## Known issues
+
+- 没有把文档安装到domserver，导致在主界面上不能查看文档
+- 没有把/www/feed目录安装到domserver，导致无法使用resolver导出功能
