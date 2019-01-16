@@ -1,6 +1,6 @@
 import requests
 
-def addUser(session_id, teamname, username):
+def addUser(session_id, teamname, username, contests = []):
     cookies = {
         'domjudge_session': session_id
     }
@@ -27,7 +27,7 @@ def addUser(session_id, teamname, username):
         ('data[0][penalty]', '0'),
         ('data[0][room]', ''),
         ('data[0][comments]', ''),
-        ('data[0][mapping][0][items]', ''),
+        ('data[0][mapping][0][items]', ','.join(contests)),
         ('data[0][enabled]', '1'),
         ('data[0][adduser]', '1'),
         ('data[0][mapping][1][extra][username]', username),
